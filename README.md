@@ -9,9 +9,9 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 Unzip the file containing the data in your working directory. 
 
 There should be four ´".txt" files:
-    - 'README.txt' providing information about the measurements and their scope.
-    - 'features_info.txt': Shows information about the variables used on the feature vector.
-    - 'features.txt': List of all names of the measurements.
+- 'README.txt' providing information about the measurements and their scope.
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+- 'features.txt': List of all names of the measurements.
     - 'activity_labels.txt': Links the class labels with their activity name.
     - and two folders called "training" and "test" containing:
         - 'train/X_train.txt': Training set.
