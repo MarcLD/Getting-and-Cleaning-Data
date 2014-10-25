@@ -12,9 +12,9 @@ There should be four ´".txt" files:
 - 'README.txt' providing information about the measurements and their scope.
 - 'features_info.txt': Shows information about the variables used on the feature vector.
 - 'features.txt': List of all names of the measurements.
-    - 'activity_labels.txt': Links the class labels with their activity name.
-    - and two folders called "training" and "test" containing:
-        - 'train/X_train.txt': Training set.
+- 'activity_labels.txt': Links the class labels with their activity name.
+and two folders called "training" and "test" containing:
+- 'train/X_train.txt': Training set.
         - 'train/y_train.txt': Training labels.
         - 'train/Subject.txt': List of the Subject for whom measurements were taken duing training.
         - 'test/X_test.txt': Test set.
