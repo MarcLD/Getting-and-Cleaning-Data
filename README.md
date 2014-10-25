@@ -50,8 +50,8 @@ The file contains the data extracted as requested in the peer assessment based o
 4. Appropriately labels the data set with descriptive variable names. 
     
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-    
- Additional details are available at: 
+
+Additional details are available at: 
     https://class.coursera.org/getdata-008/human_grading/view/courses/972586/assessments/3/submissions
     
 Finally, use data <- read.table("data_means.txt") command in R to read the file to review the contents.
