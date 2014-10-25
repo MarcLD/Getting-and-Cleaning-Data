@@ -17,17 +17,18 @@ There should be four ´".txt" files:
 And two folders called "training" and "test" containing:
 - 'train/X_train.txt': Set of measurements undertaken during the training.
 - 'train/y_train.txt': Labels of measurements undertaken during the training.
-- 'train/Subject.txt': List of the Subjects for whom measurements were taken duing training.
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample during the training. Its range is from 1 to 30.
 - 'test/X_test.txt': Set of measurements undertaken during the test.
 - 'test/y_test.txt': Labels of measurements undertaken during the test.
-- 'test/Subject.txt': List of the Subjects for whom measurements were taken duing testing.
+- 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample during the test. Its range is from 1 to 30.
 
-The following files are available for the train and test data but they are not used. Their descriptions are equivalent. 
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+The following files are available in a folder called "InertialSignals" for the train and test data but they are not used. Their descriptions are equivalent. 
+
 - 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
 - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
-        - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
+It should be noted that all the units have been normalised, therefore the units are not relevant.
 
 The file run_analysis.R script should be located in the R directory.
 
