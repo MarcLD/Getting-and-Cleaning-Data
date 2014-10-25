@@ -6,8 +6,9 @@ You can get the data from:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
-Unzip the file containing the data in your working directory. There should be:
-four ´".txt" files:
+Unzip the file containing the data in your working directory. 
+
+There should be four ´".txt" files:
     - 'README.txt' providing information about the measurements and their scope.
     - 'features_info.txt': Shows information about the variables used on the feature vector.
     - 'features.txt': List of all names of the measurements.
@@ -20,7 +21,10 @@ four ´".txt" files:
         - 'test/y_test.txt': Test labels.
         - 'test/Subject.txt': List of the Subject for whom measurements were taken duing testing.
     The following files are available for the train and test data but they are not used. Their descriptions are equivalent. 
-        - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+        - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+
+
+ 
 
         - 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
       - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
