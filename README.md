@@ -30,7 +30,7 @@ The following files are available in a folder called "InertialSignals" for the t
 
 It should be noted that all the units have been normalised, therefore the units are not relevant.
 
-The file run_analysis.R script should be located in the R directory.
+The file run_analysis.R script should be located in your working directory.
 
 Use the command source("run_analysis.R") in R to run the file.
 
