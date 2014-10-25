@@ -29,7 +29,8 @@ This file describes how run_analysis.R script works.
     
     Finally, use data <- read.table("data_means.txt") command in R to read the file to review the contents.
     
-    The files contains the means values for 68 of the measurements contained in the source files (see the files X_train and X_test).
+    The files contains the mean values for 68 of the measurements contained in the source files (see the files X_train and X_test).
+    
     These measurements relate to 30 Subjects for whom data were collected while they were involved in 6 activities (see the file activity_labels).
   
 
