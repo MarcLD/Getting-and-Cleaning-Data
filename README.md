@@ -2,7 +2,7 @@ Getting-and-Cleaning-Data
 =========================
 This file describes how run_analysis.R script works.
 
-You can get the data from 
+You can get the data from:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
