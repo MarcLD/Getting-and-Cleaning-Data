@@ -28,8 +28,6 @@ The following files are available in a folder called "InertialSignals" for the t
 - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
-It should be noted that all the units have been normalised, therefore the units are not relevant.
-
 The file run_analysis.R script should be located in your working directory.
 
 Use the command source("run_analysis.R") in R to run the file.
