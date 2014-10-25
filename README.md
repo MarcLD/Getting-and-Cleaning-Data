@@ -4,8 +4,6 @@ This file describes how run_analysis.R script works.
 
 You can get the data from 
 
-    You can get the data from 
-    
     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
     
     Unzip the file containing the data and rename the folder as "UCI HAR Dataset" as a subfolder of your R folder.
@@ -18,6 +16,10 @@ You can get the data from
     
     The file run_analysis.R will generate a "data_means.txt" file, which is available in your R folder:
         data_means.txt (220 Kb) contains a data frame with a dimension of 180*68.
+
+    You can get the data from 
+    
+
         
         The file contains the data extracted as requested in the peer assessment based on the following steps:
             1. Merges the training and the test sets to create one data set.
