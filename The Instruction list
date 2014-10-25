@@ -1,0 +1,61 @@
+# Step 1: Merges the training and the test sets to create one data set.
+# Read the file containing the measurements in the folder train.
+trainData <- read.table("./train/X_train.txt")
+# Read the file containing the labels of the measurements in the folder train.
+trainLabel <- read.table("./train/y_train.txt")
+# Read the file containing the Subjects in the folder train.
+trainSubject <- read.table("./train/subject_train.txt")
+# Read the file containing the measurements in the folder test.
+testData <- read.table("./test/X_test.txt")
+# Read the file containing the labels of the measurements in the folder text.
+testLabel <- read.table("./test/y_test.txt")
+# Read the file containing the list of Subjects in the folder test.
+testSubject <- read.table("./test/subject_test.txt")
+# Put the two tables containing the measurements in a single file.
+joinData <- rbind(trainData, testData)
+# Put the labels of the two sets of measurements in a single file.
+joinLabel <- rbind(trainLabel, testLabel)
+# Put the Subjects of the two sets of measurements in a single file.
+joinSubject <- rbind(trainSubject, testSubject)
+# Step 2: Extracts only the measurements on the mean and standard deviation for each measurement. 
+# Read the file containing the reference names of each type of the measurements.
+features <- read.table("features.txt")
+# Put the reference names of each type of the measurements as name of the the columns in joinData.
+colnames(joinData) <- features[,2] 
+# Extract in joinData, the data where in the column names we have std (for standard deviation) or mean (for mean value)
+# The column names includin meanFreq should not be included in the new file.
+sub_joinData<-joinData[ , grepl( "mean|std" , names( joinData ) ) & !grepl("meanFreq",names( joinData))]
+# Step 3: Uses descriptive activity names to name the activities in the data set.
+# Read the file containing the list of activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+activity <- read.table("activity_labels.txt")
+# We need to install the package plyr in order to use the join function.
+install.packages("plyr")
+# If the file is run in R, the user may need to chose a mirror.
+# Call for the functions included in the package plyr.
+library(plyr)
+# Make a sinlge table containing the activity and the labels of the measurements.
+# Each activity is associated with an id in the table activity, each time, this id is found in joinLabel,
+# the corresponding activity is repeated (for example WALKING is associated to 1, 
+# WALKING_UPSTAIRS is associated to 2... 
+# The resulting file (list_activity) contains the activities associated to each of the subjects in the same
+# order as sub_joinData.
+list_activity<-join(activity,joinLabel,type="right")
+# Therefore, we can now join the list of activities with sub_joinData in order to obtain a 
+# File containing all the relevant information.
+revsub_joinData<-cbind(list_activity[,2],sub_joinData)
+# Step 4: Appropriately labels the data set with descriptive variable names
+# The name of the column providing the activities, currently "list_activity[,2]", should be improved to read "Activity"
+names(revsub_joinData)[names(revsub_joinData) == 'list_activity[, 2]'] <- 'Activity'
+rev1sub_joinData<-cbind(joinSubject,revsub_joinData)
+# The name of the column providing the subjects, currently "V1", should be improved to read "Subject"
+names(rev1sub_joinData)[names(rev1sub_joinData) == 'V1'] <- 'Subject'
+# Step 5: From the data set in step 4, creates a second, independent tidy data set with 
+# the average of each variable for each activity and each subject
+# The aggregate function will apply the mean function to each of the couple (Subject (30 values), Activity (6 values)).
+# Therefore, a mean value of each of the observations is calculated for Subject "1" associated with activity "WALKING",
+# for Subject "1" associated with activity "WALKING UPSTAIRS",...Subject "13" associated with activity "SITTING", ...
+mydata<-(aggregate(rev1sub_joinData[,3:68],list(Subject = rev1sub_joinData$Subject,Activity = rev1sub_joinData$Activity),mean))
+# To order the file by Subject since we want tidy file
+mydata<-mydata[order(mydata$Subject),] 
+# The output is order by Subjects and contains 30 (Sujects) x 6 (Activities) lines and 68 measurements (columns) for which
+# the labels contains std or mean.
