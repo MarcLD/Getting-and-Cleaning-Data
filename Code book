@@ -2,6 +2,8 @@ CodeBook for Getting and Cleaning Data Course Project
 
 Study Design
 
+Source: https://class.coursera.org/getdata-008/human_grading/view/courses/972586/assessments/3/submissions
+"
 One of the most exciting areas in all of data science right now is wearable computing. 
 Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. 
 The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy 
@@ -12,7 +14,10 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+"
 
+Source: see the features_info.txt file
+"
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ 
 and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. 
 Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency 
@@ -25,7 +30,9 @@ using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyr
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, 
 fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-
+"
+Source: see the README.TXT included in the zip file.
+"
 For each record it is provided:
 ======================================
 
@@ -34,9 +41,11 @@ For each record it is provided:
 - A 561-feature vector with time and frequency domain variables. 
 - Its activity label. 
 - An identifier of the subject who carried out the experiment.
-
+"
 Code Book
 
+Source: see the features_info.txt file
+"
 The signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
@@ -87,8 +96,8 @@ tBodyGyroMean
 tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
-
-- Features are normalized and bounded within [-1,1].
+"
+- Features are normalized and bounded within [-1,1]. Therefore, there is no need to specify the units.
 - Each feature vector is a row on the text file.
 
 For more information about this dataset contact: activityrecognition@smartlab.ws
