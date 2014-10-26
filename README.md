@@ -1,10 +1,13 @@
 Getting-and-Cleaning-Data
 =========================
-This file describes how run_analysis.R script works.
+
+This file provide information on the project and in particular some information on how the file run_analysis.R works.
 
 You can get the data from:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+
+In case the url is changed, the data are also available in this folder in the file: SourceData.zip.
 
 Unzip the file containing the data in your working directory. 
 
@@ -53,9 +56,15 @@ Additional details are available at:
     https://class.coursera.org/getdata-008/human_grading/view/courses/972586/assessments/3/submissions
     
 Finally, use data <- read.table("data_means.txt") command in R to read the file to review the contents.
-    
+
 The files contains the mean values for 68 of the measurements contained in the source files (see the files X_train and X_test).
     
 These measurements relate to 30 Subjects for whom data were collected while they were involved in 6 activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).
-    
+
+The output data are available in this folder in the file data_means.txt.
+
+The file "Code book" provides further information on the Source of the data as well as detailed information on the variables and the measurements.
+
+The file "The Instruction list" provides information about each of the line codes in the "run_analysis.R" file.
+
 Acknowledgment: I would like to thank Mr. Pidanzhou for its indirect help. A reference to his github folder was given on the forum (see https://class.coursera.org/getdata-008/forum/thread?thread_id=241) and having a look to his code was very helpful to understand what the project was about and to better understand the contents of the different files. I have finally implemented most of the project in a very different manner, but it was making easier the start of this project.
