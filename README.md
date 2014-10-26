@@ -1,7 +1,7 @@
 Getting-and-Cleaning-Data
 =========================
 
-This file provide information on the project and in particular some information on how the file run_analysis.R works.
+This file provide information on the project and on how the file run_analysis.R works.
 
 You can get the data from:
 
