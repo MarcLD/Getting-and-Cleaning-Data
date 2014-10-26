@@ -59,3 +59,5 @@ mydata<-(aggregate(rev1sub_joinData[,3:68],list(Subject = rev1sub_joinData$Subje
 mydata<-mydata[order(mydata$Subject),] 
 # The output is order by Subjects and contains 30 (Sujects) x 6 (Activities) lines and 68 measurements (columns) for which
 # the labels contains std or mean.
+# Export the table in the file "data_means.txt". The names of the rows are not exported.
+write.table(mydata, "data_means.txt",row.name=FALSE) 
